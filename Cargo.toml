@@ -1,0 +1,17 @@
+[package]
+# Ported from: Extra Disks 1.21.1-4.0.15 (ChaoticTrials/ExtraDisks, Apache-2.0),
+# Minecraft Java 1.21.1 NeoForge. Local-only until the maintainer approves.
+name = "horizon-extradisks"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "Apache-2.0"
+description = "Extra Disks for Horizon: the 1024k item storage block and disk (1,048,576 items)"
+
+[lib]
+# This exact source is also injected as a same-crate module by horizon-mixins.
+path = "mixins/extradisks/runtime.rs"
+
+[workspace]
+members = ["tools/audit"]
+resolver = "2"

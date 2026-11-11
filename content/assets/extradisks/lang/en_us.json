@@ -1,0 +1,10 @@
+{
+  "block.extradisks.1024k_item_storage_block": "1024k Storage Block",
+  "item.extradisks.1024k_item_storage_disk": "1024k Storage Disk",
+  "item.extradisks.1024k_item_storage_disk.help": "Holds 1,048,576 items",
+  "block.extradisks.1024k_item_storage_block.help": "Holds 1,048,576 items",
+  "extradisks.command.info": "The storage block's contents",
+  "extradisks.command.insert": "Insert items into a storage block",
+  "extradisks.command.extract": "Take items out of a storage block",
+  "extradisks.command.disk": "Work on the held 1024k storage disk"
+}

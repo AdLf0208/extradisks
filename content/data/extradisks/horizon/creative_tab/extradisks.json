@@ -1,0 +1,8 @@
+{
+  "icon": "extradisks:1024k_item_storage_disk",
+  "title": "Extra Disks",
+  "items": [
+    "extradisks:1024k_item_storage_disk",
+    "extradisks:1024k_item_storage_block"
+  ]
+}

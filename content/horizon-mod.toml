@@ -1,0 +1,13 @@
+# Port-owned content mod for the Extra Disks slice 1: the 1024k item storage
+# block and disk (1,048,576 items).
+# Assets are carried from the exact ATM10 jar (ExtraDisks-1.21.1-4.0.15,
+# Apache-2.0) and upgraded to the 26.3 formats; the item definitions, the block
+# and item declarations, the loot table and the creative tab are this port's own.
+id = "extradisks"
+name = "Extra Disks"
+version = "0.1.0"
+description = "Bigger storage disks (and blocks) for Refined Storage"
+authors = ["MelanX"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

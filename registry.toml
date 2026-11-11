@@ -1,0 +1,49 @@
+id = "extradisks"
+kind = "native-mod"
+name = "extradisks"
+summary = "A Horizon port of extradisks."
+description = """
+A port of [extradisks](ChaoticTrials/ExtraDisks) for Horizon.
+
+**Implemented so far**
+
+- | Id | What it is | Holds |
+- |---|---|---|
+- | `extradisks:1024k_item_storage_block` | the storage block (a block entity) | 1,048,576 items in up to 256 resources |
+- | `extradisks:1024k_item_storage_disk` | the storage disk (an item) | the same, in the `extradisks:storage` item component |
+- Both use one engine (`runtime.rs`), so the capacity rule, the resource identity
+- and the encoding cannot drift apart:
+- `1024k` = `TIER_6(1024L) × 1024` = **1,048,576 items**
+- (`ExtraItemStorageVariant`; see [`FINDINGS.md`](FINDINGS.md)).
+
+**Not yet ported**
+
+- No network.** The storage block neither joins a Refined Storage network nor
+- answers the parent's grid: upstream it is a network node
+- (`StorageBlock` → `updateActiveness`/`doWork`). A player sees standalone
+- storage in this port, not storage that a Grid can browse.
+- No energy.** Upstream the 1024k block consumes 14 FE/t
+- (`ModConfig.storageblocks.item.1024k`) and the disk has no buffer. No FE hook
+- is used, and no energy is modelled.
+- No GUI.** Upstream opens `Menus.getItemStorage()` with insert slots, a
+
+Original copyright and licence notices are kept in this repository. Pinned to
+Horizon 1d63e0a and horizon-mixins 5a64af93. Help with the remaining slices is
+welcome.
+"""
+authors = ["AdLf0208"]
+owners = ["AdLf0208"]
+owner_ids = [107615167]
+license = "Apache-2.0"
+source = "https://github.com/AdLf0208/extradisks"
+icon = "icons/extradisks.png"
+categories = ["utility"]
+tags = ["port", "horizon"]
+
+[[versions]]
+version = "0.1.0"
+published = "2026-11-10"
+game = "26.3"
+file = "extradisks.hnmod"
+sha256 = "37e53bb449fca1a55e3428a98164ba617d63dca17e10c3c2ad63865bc9d11d50"
+changelog = "First release"
